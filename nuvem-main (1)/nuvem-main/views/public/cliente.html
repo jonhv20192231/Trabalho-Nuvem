@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela com Botões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        thead {
+            background-color: #000;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .update-btn {
+            background-color: #007bff;
+        }
+
+        .remove-btn {
+            background-color: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        img {
+            width: 100px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <img src="./src/disco.png" alt="">
+            <h2>Locadora Retrô</h2>
+            <p>Clientes</p>
+
+        </div>
+
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" value="Isaque" disabled></td>
+                <td>maria@email.com</td>
+                <td>(11) 99999-9999</td>
+                <td>
+                    <button class="update-btn">Atualizar</button>
+                    <button class="remove-btn">Remover</button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('src/images\ \(2\).jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+        .movie {
+            margin: 20px;
+            text-align: center;
+        }
+        .movie img {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+        }
+        .movie-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        .info {
+            margin-top: 5px;
+            color: #555;
+        }
+        .button {
+            margin-top: 10px;
+        }
+        .aluga-btn, .update-btn, .remove-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+        .aluga-btn:hover, .update-btn:hover, .remove-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Movie 1 -->
+        <div class="movie" id="movie1">
+            <img src="src/A vida é bela.jpg" alt="A vida é bela">
+            <div class="movie-title">A Vida é Bela</div>
+            <div class="info">1997 ‧ Guerra ‧ 1h 56m de duração.</div>
+            <div class="button">
+                <a href="Compra concluídafilmes.html" class="button">
+                    
+                </a>
+            </div>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="movie" id="movie2">
+            <img src="src/Star Wars.png" alt="Star Wars: Episódio I">
+            <div class="movie-title">Star Wars: Episódio I</div>
+            <div class="info">1999 ‧ Ficção científica ‧ 2h 16m de duração.</div>
+            <div class="button">
+                <a href="Compra concluídafilmes.html" class="button">
+                    
+                </a>
+            </div>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="movie" id="movie3">
+            <img src="src/Warcraft-III-Reforged-pc-free-download.jpg" alt="O pianista">
+            <div class="movie-title">Warcraft 3</div>
+            <div class="info">2020 ‧ RTS ‧ 20h de duração.</div>
+            <div class="button">
+                <a href="compra concluídajogos.html" class="button">
+                    
+                </a>
+            </div>
+        </div>
+
+        <!-- Movie 4 -->
+        <div class="movie" id="movie4">
+            <img src="src/Disco Elysium.png" alt="Disco Elysium">
+            <div class="movie-title">Disco Elysium</div>
+            <div class="info">2021 ‧ Investigação ‧ 20h de duração</div>
+            <div class="button">
+                <a href="compra concluídajogos.html" class="button">
+                    
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <script>
+        // Função para simular a atualização do filme
+        function updateMovie(movieId) {
+            const movieTitle = document.getElementById(movieId).querySelector('.movie-title').innerText;
+            alert('O filme "' + movieTitle + '" foi atualizado com sucesso!');
+        }
+
+        // Função para remover o filme da lista
+        function removeMovie(movieId) {
+            const movieElement = document.getElementById(movieId);
+            movieElement.remove(); // Remove o elemento da página
+            alert('O filme foi removido com sucesso!');
+        }
+    </script>
+
+</body>
+
+</html>

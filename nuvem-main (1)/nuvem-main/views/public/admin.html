@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfis - World Of Warcraft</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            color: #f3f3f3;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .profile-list {
+            width: 90%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffcc00;
+            margin: 20px;
+        }
+        .profile-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ffcc00;
+        }
+        .profile-item:last-child {
+            border-bottom: none;
+        }
+        .profile-name {
+            font-size: 1.2em;
+        }
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .profile-actions button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .profile-actions button:hover {
+            background-color: #0056b3;
+        }
+        .profile-actions button.remove {
+            background-color: #ff0000;
+        }
+        .profile-actions button.remove:hover {
+            background-color: #cc0000;
+        }
+
+        @media (max-width: 768px) {
+            .profile-list {
+                width: 100%;
+                padding: 10px;
+            }
+            .profile-name {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-actions button {
+                padding: 3px 5px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-list">
+        <div class="profile-title">Perfis de Usuário</div>
+        <div class="profile-item">
+            <span id="user1" class="profile-name">Usuário 1</span>
+            <div class="profile-actions">
+                <button class="update" onclick="updateUser(event)">Atualizar</button>
+                <button class="remove" onclick="removeUser(event)">Remover</button>
+            </div>
+        </div>
+        <div class="profile-item">
+            <span id="user2" class="profile-name">Usuário 2</span>
+            <div class="profile-actions">
+                <button class="update" onclick="updateUser(event)">Atualizar</button>
+                <button class="remove" onclick="removeUser(event)">Remover</button>
+            </div>
+        </div>
+        <div class="profile-item">
+            <span id="user3" class="profile-name">Usuário 3</span>
+            <div class="profile-actions">
+                <button class="update"  onclick="updateUser(event)">Atualizar</button>
+                <button class="remove" onclick="removeUser(event)">Remover</button>
+            </div>
+        </div>
+        <div class="profile-item">
+            <span id="user4" class="profile-name">Usuário 4</span>
+            <div class="profile-actions">
+                <button class="update"  onclick="updateUser(event)">Atualizar</button>
+                <button class="remove" onclick="removeUser(event)">Remover</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/admin.js"></script>
+</body>
+</html>
